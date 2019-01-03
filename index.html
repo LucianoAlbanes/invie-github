@@ -8,10 +8,21 @@
 			}
 			img{
 				max-width: 100%;
+				vertical-align: top;
+				/*display: none; /* Oculta todos los img */
+			}
+			img#responsive {
+				display: none;
+			}
+			@media screen and (max-width: 768px) { /* Si se cumple esta condición, se muestra la img/invie-responsive */
+				img#responsive{
+					display: block;
+				}
 			}
 		</style>
 	</head>
 	<body>
+		<img src="img/invie-responsive.png" id="responsive">	
 		<img src="img/header.webp">
 		<img src="img/hero.jpg">
 		<img src="img/acustica.jpg">
