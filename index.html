@@ -11,18 +11,26 @@
 				vertical-align: top;
 				/*display: none; /* Oculta todos los img */
 			}
-			img#responsive {
-				display: none;
+			@media screen and (max-width: 768px) { /* Si se cumple esta condición, se muestra la img/invie-responsive_smartphone */
+				img#responsive_smartphone{
+					display: block;
+				}
+				img#responsive_desktop{
+					display: none;
+				}
 			}
-			@media screen and (max-width: 768px) { /* Si se cumple esta condición, se muestra la img/invie-responsive */
-				img#responsive{
+			@media screen and (min-width: 768px) { /* Si se cumple esta condición, se muestra la img/invie-responsive_desktop */
+				img#responsive_smartphone{
+					display: none;
+				}
+				img#responsive_desktop{
 					display: block;
 				}
 			}
 		</style>
 	</head>
 	<body>
-		<img src="img/invie-responsive.png" id="responsive">	
-		<img src="img/nueva-version.jpg">
+		<img src="img/invie-responsive.png" id="responsive_smartphone">	
+		<img src="img/nueva-version.jpg" id="responsive_desktop">
 	</body>
 </html>
